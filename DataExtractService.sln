@@ -1,0 +1,148 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataExtractService.Service", "DataExtractService.Service\DataExtractService.Service.csproj", "{C9D87CD0-2F62-402E-AFB9-4D65C5F4FCFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataExtractService.Interface", "DataExtractService.Interface\DataExtractService.Interface.csproj", "{8551D960-109B-4DB7-B177-8CDFF7BA9E63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataExtractService.Implementation", "DataExtractService.Implementation\DataExtractService.Implementation.csproj", "{84E76575-798A-4629-B186-4CDC8BE779B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataExtractService.NinjectKernel", "DataExtractService.NinjectKernel\DataExtractService.NinjectKernel.csproj", "{8904333A-1961-4BC1-BA65-BF1749179379}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataExtractService.Repository.Contracts", "DataExtractService.Repository.Contracts\DataExtractService.Repository.Contracts.csproj", "{88F421CA-914F-4805-8349-CE1FAEB33548}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataExtractService.Repository.Implementation", "DataExtractService.Repository.Implementation\DataExtractService.Repository.Implementation.csproj", "{A2EAD1D4-8CFF-4C3E-8A99-C47DE9BAD1CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataExtractService.Shared.Logging", "DataExtractService.Shared.Logging\DataExtractService.Shared.Logging.csproj", "{4DC1D8AB-1279-4C7B-9B31-BFEDC1F2079B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataExtractService.DataAccess.Contracts", "DataExtractService.DataAccess.Contracts\DataExtractService.DataAccess.Contracts.csproj", "{FEFC011B-F122-4007-A973-56BE761C4300}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataExtractService.DataAccess.Implementation", "DataExtractService.DataAccess.Implementation\DataExtractService.DataAccess.Implementation.csproj", "{D0D01FF9-A452-4B4F-82BB-3E00BA6F2FAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataExtractService.ServiceAgent.Contracts", "DataExtractService.ServiceAgent.Contracts\DataExtractService.ServiceAgent.Contracts.csproj", "{C31501C3-CC54-4E43-9A56-4F1691AA073C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataExtractService.ServiceAgent.Implementation", "DataExtractService.ServiceAgent.Implementation\DataExtractService.ServiceAgent.Implementation.csproj", "{9D1C66B3-1269-48CA-B00F-D60B1BF37384}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.DataExtractService", "Test.DataExtractService\Test.DataExtractService.csproj", "{7452F32D-5F1E-4AB4-807D-82FB95DA90F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataExtractService.Shared.Utilities", "DataExtractService.Shared.Utilities\DataExtractService.Shared.Utilities.csproj", "{0FD40C20-2422-4BFB-991F-BAAB68EDAC21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataExtractService.Objects", "DataExtractService.Objects\DataExtractService.Objects.csproj", "{37F9DF0B-319E-435C-AEB7-0BC5F03D3B30}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C9D87CD0-2F62-402E-AFB9-4D65C5F4FCFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9D87CD0-2F62-402E-AFB9-4D65C5F4FCFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9D87CD0-2F62-402E-AFB9-4D65C5F4FCFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9D87CD0-2F62-402E-AFB9-4D65C5F4FCFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8551D960-109B-4DB7-B177-8CDFF7BA9E63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8551D960-109B-4DB7-B177-8CDFF7BA9E63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8551D960-109B-4DB7-B177-8CDFF7BA9E63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8551D960-109B-4DB7-B177-8CDFF7BA9E63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84E76575-798A-4629-B186-4CDC8BE779B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84E76575-798A-4629-B186-4CDC8BE779B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84E76575-798A-4629-B186-4CDC8BE779B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84E76575-798A-4629-B186-4CDC8BE779B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8904333A-1961-4BC1-BA65-BF1749179379}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8904333A-1961-4BC1-BA65-BF1749179379}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8904333A-1961-4BC1-BA65-BF1749179379}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8904333A-1961-4BC1-BA65-BF1749179379}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88F421CA-914F-4805-8349-CE1FAEB33548}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88F421CA-914F-4805-8349-CE1FAEB33548}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88F421CA-914F-4805-8349-CE1FAEB33548}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88F421CA-914F-4805-8349-CE1FAEB33548}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2EAD1D4-8CFF-4C3E-8A99-C47DE9BAD1CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2EAD1D4-8CFF-4C3E-8A99-C47DE9BAD1CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2EAD1D4-8CFF-4C3E-8A99-C47DE9BAD1CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2EAD1D4-8CFF-4C3E-8A99-C47DE9BAD1CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DC1D8AB-1279-4C7B-9B31-BFEDC1F2079B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DC1D8AB-1279-4C7B-9B31-BFEDC1F2079B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DC1D8AB-1279-4C7B-9B31-BFEDC1F2079B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DC1D8AB-1279-4C7B-9B31-BFEDC1F2079B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEFC011B-F122-4007-A973-56BE761C4300}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEFC011B-F122-4007-A973-56BE761C4300}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEFC011B-F122-4007-A973-56BE761C4300}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEFC011B-F122-4007-A973-56BE761C4300}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0D01FF9-A452-4B4F-82BB-3E00BA6F2FAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0D01FF9-A452-4B4F-82BB-3E00BA6F2FAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0D01FF9-A452-4B4F-82BB-3E00BA6F2FAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0D01FF9-A452-4B4F-82BB-3E00BA6F2FAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C31501C3-CC54-4E43-9A56-4F1691AA073C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C31501C3-CC54-4E43-9A56-4F1691AA073C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C31501C3-CC54-4E43-9A56-4F1691AA073C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C31501C3-CC54-4E43-9A56-4F1691AA073C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D1C66B3-1269-48CA-B00F-D60B1BF37384}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D1C66B3-1269-48CA-B00F-D60B1BF37384}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D1C66B3-1269-48CA-B00F-D60B1BF37384}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D1C66B3-1269-48CA-B00F-D60B1BF37384}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7452F32D-5F1E-4AB4-807D-82FB95DA90F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7452F32D-5F1E-4AB4-807D-82FB95DA90F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7452F32D-5F1E-4AB4-807D-82FB95DA90F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7452F32D-5F1E-4AB4-807D-82FB95DA90F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FD40C20-2422-4BFB-991F-BAAB68EDAC21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FD40C20-2422-4BFB-991F-BAAB68EDAC21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FD40C20-2422-4BFB-991F-BAAB68EDAC21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FD40C20-2422-4BFB-991F-BAAB68EDAC21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37F9DF0B-319E-435C-AEB7-0BC5F03D3B30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37F9DF0B-319E-435C-AEB7-0BC5F03D3B30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37F9DF0B-319E-435C-AEB7-0BC5F03D3B30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37F9DF0B-319E-435C-AEB7-0BC5F03D3B30}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 15
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://sreenathkurpad.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = DataExtractService.Service\\DataExtractService.Service.csproj
+		SccProjectName1 = DataExtractService.Service
+		SccLocalPath1 = DataExtractService.Service
+		SccProjectUniqueName2 = DataExtractService.Interface\\DataExtractService.Interface.csproj
+		SccProjectName2 = DataExtractService.Interface
+		SccLocalPath2 = DataExtractService.Interface
+		SccProjectUniqueName3 = DataExtractService.Implementation\\DataExtractService.Implementation.csproj
+		SccProjectName3 = DataExtractService.Implementation
+		SccLocalPath3 = DataExtractService.Implementation
+		SccProjectUniqueName4 = DataExtractService.NinjectKernel\\DataExtractService.NinjectKernel.csproj
+		SccProjectName4 = DataExtractService.NinjectKernel
+		SccLocalPath4 = DataExtractService.NinjectKernel
+		SccProjectUniqueName5 = DataExtractService.Repository.Contracts\\DataExtractService.Repository.Contracts.csproj
+		SccProjectName5 = DataExtractService.Repository.Contracts
+		SccLocalPath5 = DataExtractService.Repository.Contracts
+		SccProjectUniqueName6 = DataExtractService.Repository.Implementation\\DataExtractService.Repository.Implementation.csproj
+		SccProjectName6 = DataExtractService.Repository.Implementation
+		SccLocalPath6 = DataExtractService.Repository.Implementation
+		SccProjectUniqueName7 = DataExtractService.Shared.Logging\\DataExtractService.Shared.Logging.csproj
+		SccProjectName7 = DataExtractService.Shared.Logging
+		SccLocalPath7 = DataExtractService.Shared.Logging
+		SccProjectUniqueName8 = DataExtractService.DataAccess.Contracts\\DataExtractService.DataAccess.Contracts.csproj
+		SccProjectName8 = DataExtractService.DataAccess.Contracts
+		SccLocalPath8 = DataExtractService.DataAccess.Contracts
+		SccProjectUniqueName9 = DataExtractService.DataAccess.Implementation\\DataExtractService.DataAccess.Implementation.csproj
+		SccProjectName9 = DataExtractService.DataAccess.Implementation
+		SccLocalPath9 = DataExtractService.DataAccess.Implementation
+		SccProjectUniqueName10 = DataExtractService.ServiceAgent.Contracts\\DataExtractService.ServiceAgent.Contracts.csproj
+		SccProjectName10 = DataExtractService.ServiceAgent.Contracts
+		SccLocalPath10 = DataExtractService.ServiceAgent.Contracts
+		SccProjectUniqueName11 = DataExtractService.ServiceAgent.Implementation\\DataExtractService.ServiceAgent.Implementation.csproj
+		SccProjectName11 = DataExtractService.ServiceAgent.Implementation
+		SccLocalPath11 = DataExtractService.ServiceAgent.Implementation
+		SccProjectUniqueName12 = Test.DataExtractService\\Test.DataExtractService.csproj
+		SccProjectName12 = Test.DataExtractService
+		SccLocalPath12 = Test.DataExtractService
+		SccProjectUniqueName13 = DataExtractService.Shared.Utilities\\DataExtractService.Shared.Utilities.csproj
+		SccProjectName13 = DataExtractService.Shared.Utilities
+		SccLocalPath13 = DataExtractService.Shared.Utilities
+		SccProjectUniqueName14 = DataExtractService.Objects\\DataExtractService.Objects.csproj
+		SccProjectName14 = DataExtractService.Objects
+		SccLocalPath14 = DataExtractService.Objects
+	EndGlobalSection
+EndGlobal

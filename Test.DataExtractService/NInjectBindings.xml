@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<module name ="DataExtractBindings">
+  <bind service ="DataExtractService.Repository.Contracts.IRepository, DataExtractService.Repository.Contracts"
+        to ="DataExtractService.Repository.Implementation.Repository, DataExtractService.Repository.Implementation"/>
+
+  <bind service ="DataExtractService.Interface.IDataExtractProcessor, DataExtractService.Interface"
+      to ="DataExtractService.Implementation.DataExtractServiceProcessor, DataExtractService.Implementation"/>
+
+  <bind service ="DataExtractService.DataAccess.Contracts.IDataAccess, DataExtractService.DataAccess.Contracts"
+      to ="DataExtractService.DataAccess.Implementation.DataAccessImpl, DataExtractService.DataAccess.Implementation"/>
+
+  <bind service ="DataExtractService.ServiceAgent.Contracts.IDataServiceAgent, DataExtractService.ServiceAgent.Contracts"
+    to ="DataExtractService.ServiceAgent.Implementation.DataServiceAgent, DataExtractService.ServiceAgent.Implementation"/>
+
+</module>
+
