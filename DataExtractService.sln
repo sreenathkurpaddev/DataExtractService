@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataExtractService.Shared.U
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataExtractService.Objects", "DataExtractService.Objects\DataExtractService.Objects.csproj", "{37F9DF0B-319E-435C-AEB7-0BC5F03D3B30}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Utilities", "Test.Utilities\Test.Utilities.csproj", "{27CB4FEE-C70A-4DD1-88B3-723F664E2105}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,56 +95,12 @@ Global
 		{37F9DF0B-319E-435C-AEB7-0BC5F03D3B30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37F9DF0B-319E-435C-AEB7-0BC5F03D3B30}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37F9DF0B-319E-435C-AEB7-0BC5F03D3B30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27CB4FEE-C70A-4DD1-88B3-723F664E2105}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27CB4FEE-C70A-4DD1-88B3-723F664E2105}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27CB4FEE-C70A-4DD1-88B3-723F664E2105}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27CB4FEE-C70A-4DD1-88B3-723F664E2105}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 15
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://sreenathkurpad.visualstudio.com/
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = DataExtractService.Service\\DataExtractService.Service.csproj
-		SccProjectName1 = DataExtractService.Service
-		SccLocalPath1 = DataExtractService.Service
-		SccProjectUniqueName2 = DataExtractService.Interface\\DataExtractService.Interface.csproj
-		SccProjectName2 = DataExtractService.Interface
-		SccLocalPath2 = DataExtractService.Interface
-		SccProjectUniqueName3 = DataExtractService.Implementation\\DataExtractService.Implementation.csproj
-		SccProjectName3 = DataExtractService.Implementation
-		SccLocalPath3 = DataExtractService.Implementation
-		SccProjectUniqueName4 = DataExtractService.NinjectKernel\\DataExtractService.NinjectKernel.csproj
-		SccProjectName4 = DataExtractService.NinjectKernel
-		SccLocalPath4 = DataExtractService.NinjectKernel
-		SccProjectUniqueName5 = DataExtractService.Repository.Contracts\\DataExtractService.Repository.Contracts.csproj
-		SccProjectName5 = DataExtractService.Repository.Contracts
-		SccLocalPath5 = DataExtractService.Repository.Contracts
-		SccProjectUniqueName6 = DataExtractService.Repository.Implementation\\DataExtractService.Repository.Implementation.csproj
-		SccProjectName6 = DataExtractService.Repository.Implementation
-		SccLocalPath6 = DataExtractService.Repository.Implementation
-		SccProjectUniqueName7 = DataExtractService.Shared.Logging\\DataExtractService.Shared.Logging.csproj
-		SccProjectName7 = DataExtractService.Shared.Logging
-		SccLocalPath7 = DataExtractService.Shared.Logging
-		SccProjectUniqueName8 = DataExtractService.DataAccess.Contracts\\DataExtractService.DataAccess.Contracts.csproj
-		SccProjectName8 = DataExtractService.DataAccess.Contracts
-		SccLocalPath8 = DataExtractService.DataAccess.Contracts
-		SccProjectUniqueName9 = DataExtractService.DataAccess.Implementation\\DataExtractService.DataAccess.Implementation.csproj
-		SccProjectName9 = DataExtractService.DataAccess.Implementation
-		SccLocalPath9 = DataExtractService.DataAccess.Implementation
-		SccProjectUniqueName10 = DataExtractService.ServiceAgent.Contracts\\DataExtractService.ServiceAgent.Contracts.csproj
-		SccProjectName10 = DataExtractService.ServiceAgent.Contracts
-		SccLocalPath10 = DataExtractService.ServiceAgent.Contracts
-		SccProjectUniqueName11 = DataExtractService.ServiceAgent.Implementation\\DataExtractService.ServiceAgent.Implementation.csproj
-		SccProjectName11 = DataExtractService.ServiceAgent.Implementation
-		SccLocalPath11 = DataExtractService.ServiceAgent.Implementation
-		SccProjectUniqueName12 = Test.DataExtractService\\Test.DataExtractService.csproj
-		SccProjectName12 = Test.DataExtractService
-		SccLocalPath12 = Test.DataExtractService
-		SccProjectUniqueName13 = DataExtractService.Shared.Utilities\\DataExtractService.Shared.Utilities.csproj
-		SccProjectName13 = DataExtractService.Shared.Utilities
-		SccLocalPath13 = DataExtractService.Shared.Utilities
-		SccProjectUniqueName14 = DataExtractService.Objects\\DataExtractService.Objects.csproj
-		SccProjectName14 = DataExtractService.Objects
-		SccLocalPath14 = DataExtractService.Objects
 	EndGlobalSection
 EndGlobal

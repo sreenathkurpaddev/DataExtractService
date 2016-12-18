@@ -9,6 +9,6 @@ namespace DataExtractService.DataAccess.Implementation
 {
     public class DataAccessImpl : IDataAccess
     {
-        //BusinessLogger.Log(string.Format("", );
+        //LogWrapper.Log(string.Format("", );
     }
 }

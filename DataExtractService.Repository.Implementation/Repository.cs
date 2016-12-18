@@ -199,7 +199,7 @@ namespace DataExtractService.Repository.Implementation
         }
 
         string GetConnectionString()
-       => ConfigurationManager.ConnectionStrings?["Primary"]?.ConnectionString ?? string.Empty;
+       => ConfigurationManager.ConnectionStrings?["SQLDb"]?.ConnectionString ?? string.Empty;
 
         SqlCommand GetSQLCommand(string procedureName, Dictionary<string, object> paramsDictionary)
         {

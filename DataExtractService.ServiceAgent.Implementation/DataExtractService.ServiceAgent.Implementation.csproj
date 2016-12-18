@@ -34,6 +34,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -49,6 +53,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DataExtractService.Objects\DataExtractService.Objects.csproj">
+      <Project>{37f9df0b-319e-435c-aeb7-0bc5f03d3b30}</Project>
+      <Name>DataExtractService.Objects</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DataExtractService.ServiceAgent.Contracts\DataExtractService.ServiceAgent.Contracts.csproj">
       <Project>{c31501c3-cc54-4e43-9a56-4f1691aa073c}</Project>
       <Name>DataExtractService.ServiceAgent.Contracts</Name>
@@ -57,6 +65,9 @@
       <Project>{4dc1d8ab-1279-4c7b-9b31-bfedc1f2079b}</Project>
       <Name>DataExtractService.Shared.Logging</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

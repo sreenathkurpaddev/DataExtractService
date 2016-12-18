@@ -8,7 +8,7 @@ using System.Diagnostics;
 
 namespace DataExtractService.Shared.Logging
 {
-    public static class BusinessLogger
+    public static class LogWrapper
     {
         public const string AllEventsCategory = "AllEvents";
 
@@ -35,7 +35,7 @@ namespace DataExtractService.Shared.Logging
             }
             catch
             {
-                // If logging itself fails we will swallow the exception,not logging any exception
+              //swallow exception
             }
         }
 
@@ -43,15 +43,14 @@ namespace DataExtractService.Shared.Logging
         {
             LogEntry le = new LogEntry();
 
-            le.Categories.Add(category); // simplification: only one category.
+            le.Categories.Add(category); 
             le.EventId = eventId;
             le.Priority = priority;
             le.Severity = severity;
             le.TimeStamp = DateTime.Now;
             le.MachineName = Environment.MachineName;
 
-            // used mainly for the custom db trace listener to be able to write to the LOG_KEY column table.
-            le.Message = String.Format("LOG_KEY={0}|{1}", key, message);
+            le.Message = $"LogKey = {key} | Message = {message}";
             return le;
         }
     }

@@ -49,9 +49,25 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DataExtractService.DataAccess.Contracts\DataExtractService.DataAccess.Contracts.csproj">
+      <Project>{fefc011b-f122-4007-a973-56be761c4300}</Project>
+      <Name>DataExtractService.DataAccess.Contracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DataExtractService.Interface\DataExtractService.Interface.csproj">
       <Project>{8551d960-109b-4db7-b177-8cdff7ba9e63}</Project>
       <Name>DataExtractService.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataExtractService.NinjectKernel\DataExtractService.NinjectKernel.csproj">
+      <Project>{8904333a-1961-4bc1-ba65-bf1749179379}</Project>
+      <Name>DataExtractService.NinjectKernel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataExtractService.Objects\DataExtractService.Objects.csproj">
+      <Project>{37f9df0b-319e-435c-aeb7-0bc5f03d3b30}</Project>
+      <Name>DataExtractService.Objects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataExtractService.ServiceAgent.Contracts\DataExtractService.ServiceAgent.Contracts.csproj">
+      <Project>{c31501c3-cc54-4e43-9a56-4f1691aa073c}</Project>
+      <Name>DataExtractService.ServiceAgent.Contracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\DataExtractService.Shared.Logging\DataExtractService.Shared.Logging.csproj">
       <Project>{4dc1d8ab-1279-4c7b-9b31-bfedc1f2079b}</Project>

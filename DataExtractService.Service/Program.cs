@@ -14,7 +14,7 @@ namespace DataExtractService.Service
         /// </summary>
       static void Main()
       {
-        System.Diagnostics.EventLog.WriteEntry("Email Receipt Service", "Yes. Started...");
+        System.Diagnostics.EventLog.WriteEntry("Data Extract Service", "Yes. Started...");
         ServiceBase[] ServicesToRun;
         ServicesToRun = new ServiceBase[] 
             { 

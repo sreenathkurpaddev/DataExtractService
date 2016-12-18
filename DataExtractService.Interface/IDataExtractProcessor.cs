@@ -8,6 +8,6 @@ namespace DataExtractService.Interface
 {
 	public interface IDataExtractProcessor
 	{
-		void StartTimer();
+        Task Run();
 	}
 }
