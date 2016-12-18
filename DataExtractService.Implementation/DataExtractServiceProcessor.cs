@@ -11,6 +11,8 @@ using DataExtractService.ServiceAgent.Contracts;
 using DataExtractService.NinjectKernel;
 using DataExtractService.Shared.Logging;
 using DataExtractService.Objects;
+using DataExtractService.DataAccess.Implementation;
+using DataExtractService.ServiceAgent.Implementation;
 
 namespace DataExtractService.Implementation
 {
@@ -22,8 +24,8 @@ namespace DataExtractService.Implementation
         public DataExtractServiceProcessor()
         {
             LogWrapper.Log("Enter DataExtractServiceProcess .ctor", $"Thread id : {System.Threading.Thread.CurrentThread.ManagedThreadId}", 1, System.Diagnostics.TraceEventType.Information);
-            _dal = ComponentKernel.GetInstance<IDataAccess>();
-            _serviceProxy = ComponentKernel.GetInstance<IDataServiceAgent>();
+            _dal = new DataAccessImpl();
+            _serviceProxy = new DataServiceAgent();
             LogWrapper.Log("Exit DataExtractServiceProcess .ctor", $"Thread id : {System.Threading.Thread.CurrentThread.ManagedThreadId}", 1, System.Diagnostics.TraceEventType.Information);
         }
         

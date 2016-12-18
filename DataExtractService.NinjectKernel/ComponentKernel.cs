@@ -18,8 +18,9 @@ namespace DataExtractService.NinjectKernel
 				if (Kernel == null)
 				{
 					Kernel = new StandardKernel();
-					//Loads the dependancies from XML file
-					Kernel.Load(NinjectBindingsXml);
+                    string filePath = String.Concat(AppDomain.CurrentDomain.BaseDirectory, NinjectBindingsXml);
+                    //Loads the dependancies from XML file
+                    Kernel.Load(filePath);
 				}
 			}
 			catch (Exception)

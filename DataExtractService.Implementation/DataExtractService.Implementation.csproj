@@ -53,6 +53,10 @@
       <Project>{fefc011b-f122-4007-a973-56be761c4300}</Project>
       <Name>DataExtractService.DataAccess.Contracts</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DataExtractService.DataAccess.Implementation\DataExtractService.DataAccess.Implementation.csproj">
+      <Project>{d0d01ff9-a452-4b4f-82bb-3e00ba6f2faa}</Project>
+      <Name>DataExtractService.DataAccess.Implementation</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DataExtractService.Interface\DataExtractService.Interface.csproj">
       <Project>{8551d960-109b-4db7-b177-8cdff7ba9e63}</Project>
       <Name>DataExtractService.Interface</Name>
@@ -68,6 +72,10 @@
     <ProjectReference Include="..\DataExtractService.ServiceAgent.Contracts\DataExtractService.ServiceAgent.Contracts.csproj">
       <Project>{c31501c3-cc54-4e43-9a56-4f1691aa073c}</Project>
       <Name>DataExtractService.ServiceAgent.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataExtractService.ServiceAgent.Implementation\DataExtractService.ServiceAgent.Implementation.csproj">
+      <Project>{9d1c66b3-1269-48ca-b00f-d60b1bf37384}</Project>
+      <Name>DataExtractService.ServiceAgent.Implementation</Name>
     </ProjectReference>
     <ProjectReference Include="..\DataExtractService.Shared.Logging\DataExtractService.Shared.Logging.csproj">
       <Project>{4dc1d8ab-1279-4c7b-9b31-bfedc1f2079b}</Project>

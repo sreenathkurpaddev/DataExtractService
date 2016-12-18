@@ -17,6 +17,10 @@ namespace DataExtractService.ServiceAgent.Implementation
 {
     public class DataServiceAgent : IDataServiceAgent
     {
+        public DataServiceAgent()
+        {
+
+        }
         public async Task<TOutput> CallExternalServicePostAsync<T, TOutput>(T input) where T : class
         {
             using (HttpClient client = new HttpClient())

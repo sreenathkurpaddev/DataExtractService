@@ -5,6 +5,8 @@ using System.ServiceProcess;
 using DataExtractService.Shared.Logging;
 using System.Timers;
 using DataExtractService.Interface;
+using DataExtractService.DataAccess.Contracts;
+using DataExtractService.ServiceAgent.Contracts;
 
 namespace DataExtractService.Service
 {
@@ -19,7 +21,7 @@ namespace DataExtractService.Service
             InitializeComponent();
             ComponentKernel.LoadKernel(ConfigurationManager.AppSettings["NInjenctBindingsXmlPath"]);
             StartTimer();
-            LogWrapper.Log("Data Extract Service constructor completed", "DataExtractService.Constructor", 1, System.Diagnostics.TraceEventType.Error);
+            LogWrapper.Log("Data Extract Service constructor completed", $"Thread id: {System.Threading.Thread.CurrentThread.ManagedThreadId}", 1, System.Diagnostics.TraceEventType.Information);
 
         }
 

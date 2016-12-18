@@ -10,5 +10,9 @@ namespace DataExtractService.DataAccess.Implementation
     public class DataAccessImpl : IDataAccess
     {
         //LogWrapper.Log(string.Format("", );
+        public DataAccessImpl()
+        {
+
+        }
     }
 }
