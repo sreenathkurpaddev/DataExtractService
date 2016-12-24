@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace DataExtractService.Repository.Contracts
 {
-	public interface IRepository
+    public interface IRepository
 	{
         Task InsertAsync(string procedureName, Dictionary<string, object> parameters);
 

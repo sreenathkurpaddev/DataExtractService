@@ -1,10 +1,7 @@
 ﻿using DataExtractService.Shared.Logging;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataExtractService.Objects
 {
@@ -69,33 +66,29 @@ namespace DataExtractService.Objects
         public String DealerId;
         public String Token;
 
-        public IDictionary<string, IEnumerable<KeyEvent>> GetKeyEventGrp ()
+        /// <summary>
+        /// Creates a unique group of key events identified by a key
+        /// Key consists of : EmployeeId, EventType, MachineId
+        /// </summary>
+        /// <returns>Dictionary of unique key events</returns>
+        public IDictionary<string, KeyEvent> GetKeyEventGrp ()
         {
             try
             {
                 if (this.KeyEvents == null || this.KeyEvents.Count() == 0) return null;
-                Dictionary<string, IList<KeyEvent>> keyevntsDict = new Dictionary<string, IList<KeyEvent>>();
-                Dictionary<string, IEnumerable<KeyEvent>> keyevntsGrpDict = new Dictionary<string, IEnumerable<KeyEvent>>();
+                Dictionary<string, KeyEvent> keyevntsGrpDict = new Dictionary<string, KeyEvent>();
                 foreach (var item in this.KeyEvents)
                 {
-                    IList<KeyEvent> _grpedEvents = null;
-                    if (!keyevntsDict.ContainsKey(item.Key))
+                    if (!keyevntsGrpDict.ContainsKey(item.Key))
                     {
-                        _grpedEvents = new List<KeyEvent>();
-                        keyevntsDict.Add(item.Key, _grpedEvents);
-                        _grpedEvents.Add(new KeyEvent(item.KeyEventId, item.MachineId, item.StockNumber, item.EmployeeId, item.EventType, item.TimeStamp));
+                        LogWrapper.Log($"Found new key to add to Group dictionary. Key is {item.Key}. Key event is {item.ToString()}", $"Thread id : {System.Threading.Thread.CurrentThread.ManagedThreadId}", 1, System.Diagnostics.TraceEventType.Verbose);
+                        keyevntsGrpDict.Add(item.Key, new KeyEvent(item.KeyEventId, item.MachineId, item.StockNumber, item.EmployeeId, item.EventType, item.TimeStamp));
                     }
                     else
                     {
-                        _grpedEvents = keyevntsDict[item.Key];
-                        _grpedEvents.Add(new KeyEvent(item.MachineId, item.StockNumber, item.EmployeeId, item.EventType, item.TimeStamp));
+                        LogWrapper.Log($"Key {item.Key} already exists in Group dictionary. Key event is {item.ToString()} not getting added", $"Thread id : {System.Threading.Thread.CurrentThread.ManagedThreadId}", 1, System.Diagnostics.TraceEventType.Verbose);
                     }
                 }
-                foreach (KeyValuePair<string, IList<KeyEvent>> kvp in keyevntsDict)
-                {
-                    keyevntsGrpDict.Add(kvp.Key, kvp.Value as IEnumerable<KeyEvent>);
-                }
-
                 return keyevntsGrpDict;
             }
             catch(Exception ex)
@@ -126,6 +119,10 @@ namespace DataExtractService.Objects
     {
         public Boolean Response;
         public String ResponseMessage;
+        public int ResponseTimeinSecs;
+        public string RequestJsonString;
+        public DateTime RequestSentDateTime;
+        public bool IsSuccessful;
 
         public override string ToString()
         {

@@ -1,12 +1,10 @@
-﻿using DataExtractService.NinjectKernel;
+﻿using DataExtractService.Interface;
+using DataExtractService.NinjectKernel;
+using DataExtractService.Shared.Logging;
 using System;
 using System.Configuration;
 using System.ServiceProcess;
-using DataExtractService.Shared.Logging;
 using System.Timers;
-using DataExtractService.Interface;
-using DataExtractService.DataAccess.Contracts;
-using DataExtractService.ServiceAgent.Contracts;
 
 namespace DataExtractService.Service
 {
