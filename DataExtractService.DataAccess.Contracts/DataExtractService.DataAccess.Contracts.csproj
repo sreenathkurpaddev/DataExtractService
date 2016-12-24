@@ -47,6 +47,12 @@
     <Compile Include="IDataAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataExtractService.Objects\DataExtractService.Objects.csproj">
+      <Project>{37f9df0b-319e-435c-aeb7-0bc5f03d3b30}</Project>
+      <Name>DataExtractService.Objects</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

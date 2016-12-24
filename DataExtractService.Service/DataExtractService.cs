@@ -33,7 +33,7 @@ namespace DataExtractService.Service
                 int.TryParse(ConfigurationManager.AppSettings["ServiceRunInterval"], out serviceInterval);
                 LogWrapper.Log($"Setting the timer interval at : {serviceInterval/1000/60} minutes.", $"Thread id: {System.Threading.Thread.CurrentThread.ManagedThreadId}", 1, System.Diagnostics.TraceEventType.Information);
                 _timer = new System.Timers.Timer(serviceInterval);
-                _timer.Elapsed += new ElapsedEventHandler(TimerElapsed);
+                _timer.Elapsed += new ElapsedEventHandler(TimerElapsedHandler);
             }
             catch (Exception ex)
             {
@@ -41,7 +41,7 @@ namespace DataExtractService.Service
             }
         }
 
-        private void TimerElapsed(object sender, ElapsedEventArgs eventArguments)
+        private void TimerElapsedHandler(object sender, ElapsedEventArgs eventArguments)
         {
             _timer.Enabled = false;
             try

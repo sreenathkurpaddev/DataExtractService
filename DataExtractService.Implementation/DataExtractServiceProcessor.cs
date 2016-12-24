@@ -38,11 +38,18 @@ namespace DataExtractService.Implementation
             try
             {
                 LogWrapper.Log("Enter DataExtractService Run method", $"Thread id : {System.Threading.Thread.CurrentThread.ManagedThreadId}", 1, System.Diagnostics.TraceEventType.Information);
-                var inputObj = GetRequestObject();
+
+                LogWrapper.Log("Enter DataExtractService DAL to fetch keyevents to call service", $"Thread id : {System.Threading.Thread.CurrentThread.ManagedThreadId}", 1, System.Diagnostics.TraceEventType.Information);
+
+                var inputObj = await _dal.GetKeyEventsToProcessAsync();
+
+                var grpedDictionary = inputObj.GetKeyEventGrp();         
+                //var inputObj = GetRequestObject();
 
                 LogWrapper.Log($"Calling web service with input object : {inputObj}", $"Thread id : {System.Threading.Thread.CurrentThread.ManagedThreadId}", 1, System.Diagnostics.TraceEventType.Information);
                 var response = await _serviceProxy.CallExternalServicePostAsync<KeyEventWrapper, KeyEventResponse>(inputObj);
                 LogWrapper.Log($"Response received from web service : {response?.ToString()}", $"Thread id : {System.Threading.Thread.CurrentThread.ManagedThreadId}", 1, System.Diagnostics.TraceEventType.Information);
+
 
                 LogWrapper.Log("Exit DataExtractService Run method", $"Thread id : {System.Threading.Thread.CurrentThread.ManagedThreadId}", 1, System.Diagnostics.TraceEventType.Information);
             }
