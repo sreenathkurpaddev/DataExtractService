@@ -1,17 +1,12 @@
-﻿using DataExtractService.Objects;
-using DataExtractService.ServiceAgent.Contracts;
+﻿using DataExtractService.ServiceAgent.Contracts;
+using DataExtractService.Shared.Logging;
 using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
 using System.Configuration;
-using System.IO;
-using System.Linq;
-using System.Net;
+using System.Diagnostics;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using DataExtractService.Shared.Logging;
-using System.Diagnostics;
 
 namespace DataExtractService.ServiceAgent.Implementation
 {

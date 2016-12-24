@@ -1,4 +1,5 @@
-﻿using DataExtractService.Interface;
+﻿using DataExtractService.Implementation;
+using DataExtractService.Interface;
 using DataExtractService.NinjectKernel;
 using DataExtractService.Shared.Logging;
 using System;
@@ -45,7 +46,7 @@ namespace DataExtractService.Service
             try
             {
                 LogWrapper.Log($"Timer Elapsed event triggered. Running data extract processor at : {eventArguments.SignalTime} ", $"Thread id: {System.Threading.Thread.CurrentThread.ManagedThreadId}", 1, System.Diagnostics.TraceEventType.Information);
-                IDataExtractProcessor backGroundProcessor = ComponentKernel.GetInstance<IDataExtractProcessor>();
+                IDataExtractProcessor backGroundProcessor = new DataExtractServiceProcessor();
                 backGroundProcessor.Run();
                 LogWrapper.Log($"Data Extract processor completed", $"Thread id: {System.Threading.Thread.CurrentThread.ManagedThreadId}", 1, System.Diagnostics.TraceEventType.Information);
             }

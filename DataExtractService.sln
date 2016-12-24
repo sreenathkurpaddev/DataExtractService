@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataExtractService.Objects"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Utilities", "Test.Utilities\Test.Utilities.csproj", "{27CB4FEE-C70A-4DD1-88B3-723F664E2105}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.DataAccess", "Test.DataAccess\Test.DataAccess.csproj", "{9F2B3831-9332-4772-9F63-8FAD4456DF60}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{27CB4FEE-C70A-4DD1-88B3-723F664E2105}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27CB4FEE-C70A-4DD1-88B3-723F664E2105}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27CB4FEE-C70A-4DD1-88B3-723F664E2105}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F2B3831-9332-4772-9F63-8FAD4456DF60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F2B3831-9332-4772-9F63-8FAD4456DF60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F2B3831-9332-4772-9F63-8FAD4456DF60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F2B3831-9332-4772-9F63-8FAD4456DF60}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
