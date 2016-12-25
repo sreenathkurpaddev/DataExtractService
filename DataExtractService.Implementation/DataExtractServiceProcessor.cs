@@ -56,7 +56,7 @@ namespace DataExtractService.Implementation
                 //var inputObj = GetRequestObject();
 
                 LogWrapper.Log($"Calling web service with input object : {originalKeyEvents}", $"Thread id : {System.Threading.Thread.CurrentThread.ManagedThreadId}", 1, System.Diagnostics.TraceEventType.Information);
-                var response = await _serviceProxy.CallExternalServicePostAsync<KeyEventWrapper, KeyEventResponse>(groupdWrapper);
+                var response = await _serviceProxy.CallServicePostAsync<KeyEventWrapper, KeyEventResponse>(groupdWrapper);
                 LogWrapper.Log($"Response received from web service : {response?.ToString()}", $"Thread id : {System.Threading.Thread.CurrentThread.ManagedThreadId}", 1, System.Diagnostics.TraceEventType.Information);
 
                 if (response != null && response.Item1 != null)

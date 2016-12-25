@@ -43,10 +43,10 @@ namespace DataExtractService.Shared.Logging
             le.EventId = eventId;
             le.Priority = priority;
             le.Severity = severity;
-            le.TimeStamp = DateTime.Now;
+            le.TimeStamp = DateTime.UtcNow;
             le.MachineName = Environment.MachineName;
 
-            le.Message = $"LogKey = {key} | Message = {message}";
+            le.Message = $"{key} | Message = {message}";
             return le;
         }
     }

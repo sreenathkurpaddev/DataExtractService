@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7452F32D-5F1E-4AB4-807D-82FB95DA90F5}</ProjectGuid>
+    <ProjectGuid>{FB7EE5EC-F196-40B6-B872-2F38B0D6F4E1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Test.DataExtractService</RootNamespace>
-    <AssemblyName>Test.DataExtractService</AssemblyName>
+    <RootNamespace>Test.ServiceAgent</RootNamespace>
+    <AssemblyName>Test.ServiceAgent</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -16,10 +16,6 @@
     <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
     <IsCodedUITest>False</IsCodedUITest>
     <TestProjectType>UnitTest</TestProjectType>
-    <SccProjectName>SAK</SccProjectName>
-    <SccLocalPath>SAK</SccLocalPath>
-    <SccAuxPath>SAK</SccAuxPath>
-    <SccProvider>SAK</SccProvider>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -39,8 +35,40 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Practices.EnterpriseLibrary.2008.4.1\lib\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Practices.EnterpriseLibrary.2008.4.1\lib\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Practices.EnterpriseLibrary.2008.4.1\lib\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Practices.EnterpriseLibrary.2008.4.1\lib\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Practices.EnterpriseLibrary.2008.4.1\lib\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging.Database, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Practices.EnterpriseLibrary.2008.4.1\lib\Microsoft.Practices.EnterpriseLibrary.Logging.Database.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Practices.EnterpriseLibrary.2008.4.1\lib\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -55,41 +83,13 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="DataExtractServiceTests.cs" />
+    <Compile Include="ServiceAgentTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DataExtractService.DataAccess.Contracts\DataExtractService.DataAccess.Contracts.csproj">
-      <Project>{fefc011b-f122-4007-a973-56be761c4300}</Project>
-      <Name>DataExtractService.DataAccess.Contracts</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DataExtractService.DataAccess.Implementation\DataExtractService.DataAccess.Implementation.csproj">
-      <Project>{d0d01ff9-a452-4b4f-82bb-3e00ba6f2faa}</Project>
-      <Name>DataExtractService.DataAccess.Implementation</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DataExtractService.Implementation\DataExtractService.Implementation.csproj">
-      <Project>{84e76575-798a-4629-b186-4cdc8be779b6}</Project>
-      <Name>DataExtractService.Implementation</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DataExtractService.Interface\DataExtractService.Interface.csproj">
-      <Project>{8551d960-109b-4db7-b177-8cdff7ba9e63}</Project>
-      <Name>DataExtractService.Interface</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DataExtractService.NinjectKernel\DataExtractService.NinjectKernel.csproj">
-      <Project>{8904333a-1961-4bc1-ba65-bf1749179379}</Project>
-      <Name>DataExtractService.NinjectKernel</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DataExtractService.Objects\DataExtractService.Objects.csproj">
       <Project>{37f9df0b-319e-435c-aeb7-0bc5f03d3b30}</Project>
       <Name>DataExtractService.Objects</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DataExtractService.Repository.Contracts\DataExtractService.Repository.Contracts.csproj">
-      <Project>{88f421ca-914f-4805-8349-ce1faeb33548}</Project>
-      <Name>DataExtractService.Repository.Contracts</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DataExtractService.Repository.Implementation\DataExtractService.Repository.Implementation.csproj">
-      <Project>{a2ead1d4-8cff-4c3e-8a99-c47de9bad1cc}</Project>
-      <Name>DataExtractService.Repository.Implementation</Name>
     </ProjectReference>
     <ProjectReference Include="..\DataExtractService.ServiceAgent.Contracts\DataExtractService.ServiceAgent.Contracts.csproj">
       <Project>{c31501c3-cc54-4e43-9a56-4f1691aa073c}</Project>
@@ -99,22 +99,16 @@
       <Project>{9d1c66b3-1269-48ca-b00f-d60b1bf37384}</Project>
       <Name>DataExtractService.ServiceAgent.Implementation</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DataExtractService.Service\DataExtractService.Service.csproj">
-      <Project>{c9d87cd0-2f62-402e-afb9-4d65c5f4fcfb}</Project>
-      <Name>DataExtractService.Service</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DataExtractService.Shared.Logging\DataExtractService.Shared.Logging.csproj">
       <Project>{4dc1d8ab-1279-4c7b-9b31-bfedc1f2079b}</Project>
       <Name>DataExtractService.Shared.Logging</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="NInjectBindings.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

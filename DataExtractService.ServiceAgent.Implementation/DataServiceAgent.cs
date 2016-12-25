@@ -16,7 +16,7 @@ namespace DataExtractService.ServiceAgent.Implementation
         {
 
         }
-        public async Task<Tuple<TOutput, string, DateTime, int, bool>> CallExternalServicePostAsync<T, TOutput>(T input) where T : class
+        public async Task<Tuple<TOutput, string, DateTime, int, bool>> CallServicePostAsync<T, TOutput>(T input) where T : class
         {
             using (HttpClient client = new HttpClient())
             {
@@ -34,11 +34,11 @@ namespace DataExtractService.ServiceAgent.Implementation
 
                     sw.Start();
                     var response = await client.PostAsync(MdlUrl, new StringContent(json, Encoding.UTF8, "application/json"));
-                    LogWrapper.Log($"Received {response.StatusCode} status code from Service {MdlUrl}", $"Thread id : {System.Threading.Thread.CurrentThread.ManagedThreadId}", 1, TraceEventType.Information);
+                    LogWrapper.Log($"Received {response.StatusCode} status code  in {sw.ElapsedMilliseconds} ms from Service {MdlUrl}", $"Thread id : {System.Threading.Thread.CurrentThread.ManagedThreadId}", 1, TraceEventType.Information);
                     sw.Stop();
 
                     var jsonResponse = await response.Content.ReadAsStringAsync();
-                    LogWrapper.Log($"Received {jsonResponse} from Service {MdlUrl} in {Convert.ToInt32(sw.ElapsedMilliseconds / 1000)}", $"Thread id : {System.Threading.Thread.CurrentThread.ManagedThreadId}", 1, TraceEventType.Information);
+                    LogWrapper.Log($"Received {jsonResponse} from Service url  {MdlUrl}", $"Thread id : {System.Threading.Thread.CurrentThread.ManagedThreadId}", 1, TraceEventType.Information);
 
                     var resp = JsonConvert.DeserializeObject<TOutput>(jsonResponse);
                     LogWrapper.Log($"{(resp != null ? "Successfully" : "Failed to")} serialize Json to {resp.GetType()} from Service {MdlUrl}", $"Thread id : {System.Threading.Thread.CurrentThread.ManagedThreadId}", 1, TraceEventType.Information);

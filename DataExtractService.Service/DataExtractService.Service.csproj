@@ -112,10 +112,6 @@
       <Project>{4dc1d8ab-1279-4c7b-9b31-bfedc1f2079b}</Project>
       <Name>DataExtractService.Shared.Logging</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DataExtractService.Shared.Utilities\DataExtractService.Shared.Utilities.csproj">
-      <Project>{0fd40c20-2422-4bfb-991f-baab68edac21}</Project>
-      <Name>DataExtractService.Shared.Utilities</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

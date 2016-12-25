@@ -27,13 +27,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataExtractService.ServiceA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.DataExtractService", "Test.DataExtractService\Test.DataExtractService.csproj", "{7452F32D-5F1E-4AB4-807D-82FB95DA90F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataExtractService.Shared.Utilities", "DataExtractService.Shared.Utilities\DataExtractService.Shared.Utilities.csproj", "{0FD40C20-2422-4BFB-991F-BAAB68EDAC21}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataExtractService.Objects", "DataExtractService.Objects\DataExtractService.Objects.csproj", "{37F9DF0B-319E-435C-AEB7-0BC5F03D3B30}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Utilities", "Test.Utilities\Test.Utilities.csproj", "{27CB4FEE-C70A-4DD1-88B3-723F664E2105}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.DataAccess", "Test.DataAccess\Test.DataAccess.csproj", "{9F2B3831-9332-4772-9F63-8FAD4456DF60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.ServiceAgent", "Test.ServiceAgent\Test.ServiceAgent.csproj", "{FB7EE5EC-F196-40B6-B872-2F38B0D6F4E1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -89,10 +89,6 @@ Global
 		{7452F32D-5F1E-4AB4-807D-82FB95DA90F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7452F32D-5F1E-4AB4-807D-82FB95DA90F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7452F32D-5F1E-4AB4-807D-82FB95DA90F5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0FD40C20-2422-4BFB-991F-BAAB68EDAC21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0FD40C20-2422-4BFB-991F-BAAB68EDAC21}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0FD40C20-2422-4BFB-991F-BAAB68EDAC21}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0FD40C20-2422-4BFB-991F-BAAB68EDAC21}.Release|Any CPU.Build.0 = Release|Any CPU
 		{37F9DF0B-319E-435C-AEB7-0BC5F03D3B30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{37F9DF0B-319E-435C-AEB7-0BC5F03D3B30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37F9DF0B-319E-435C-AEB7-0BC5F03D3B30}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -105,6 +101,10 @@ Global
 		{9F2B3831-9332-4772-9F63-8FAD4456DF60}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F2B3831-9332-4772-9F63-8FAD4456DF60}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F2B3831-9332-4772-9F63-8FAD4456DF60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB7EE5EC-F196-40B6-B872-2F38B0D6F4E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB7EE5EC-F196-40B6-B872-2F38B0D6F4E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB7EE5EC-F196-40B6-B872-2F38B0D6F4E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB7EE5EC-F196-40B6-B872-2F38B0D6F4E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
