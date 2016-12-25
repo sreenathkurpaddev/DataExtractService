@@ -47,12 +47,6 @@
     <Compile Include="IDataExtractProcessor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BestBuy.Retail.Common.Communication.Configuration\BestBuy.Retail.Common.Communication.Configuration.csproj">
-      <Project>{d2dd0199-dfbe-4b33-827c-39f75e751e06}</Project>
-      <Name>BestBuy.Retail.Common.Communication.Configuration</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
