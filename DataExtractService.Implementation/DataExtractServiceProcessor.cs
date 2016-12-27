@@ -1,10 +1,10 @@
-﻿using DataExtractService.DataAccess.Contracts;
+﻿using App.Core.Logging;
+using App.Core.ServiceAgents.Contracts;
+using App.Core.ServiceAgents.Implementation;
+using DataExtractService.DataAccess.Contracts;
 using DataExtractService.DataAccess.Implementation;
 using DataExtractService.Interface;
 using DataExtractService.Objects;
-using DataExtractService.ServiceAgent.Contracts;
-using DataExtractService.ServiceAgent.Implementation;
-using DataExtractService.Shared.Logging;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -14,13 +14,13 @@ namespace DataExtractService.Implementation
     public class DataExtractServiceProcessor : IDataExtractProcessor
     {
         private IDataAccess _dal;
-        private IDataServiceAgent _serviceProxy;
+        private IServiceAgent _serviceProxy;
 
         public DataExtractServiceProcessor()
         {
             LogWrapper.Log("Enter DataExtractServiceProcess .ctor", $"Thread id : {System.Threading.Thread.CurrentThread.ManagedThreadId}", 1, System.Diagnostics.TraceEventType.Information);
             _dal = new DataAccessImpl();
-            _serviceProxy = new DataServiceAgent();
+            _serviceProxy = new ExternalServiceAgent();
             LogWrapper.Log("Exit DataExtractServiceProcess .ctor", $"Thread id : {System.Threading.Thread.CurrentThread.ManagedThreadId}", 1, System.Diagnostics.TraceEventType.Information);
         }
         

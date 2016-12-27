@@ -1,4 +1,4 @@
-﻿using DataExtractService.Shared.Logging;
+﻿using App.Core.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;

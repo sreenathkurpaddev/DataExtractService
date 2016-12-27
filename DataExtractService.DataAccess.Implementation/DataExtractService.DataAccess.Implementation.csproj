@@ -34,6 +34,39 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="App.Core.Logging">
+      <HintPath>..\References\App.Core.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="App.Core.Repository.Contracts">
+      <HintPath>..\References\App.Core.Repository.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="App.Core.Repository.Implementation">
+      <HintPath>..\References\App.Core.Repository.Implementation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <HintPath>..\References\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling">
+      <HintPath>..\References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging">
+      <HintPath>..\References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging.Database">
+      <HintPath>..\References\Microsoft.Practices.EnterpriseLibrary.Logging.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -55,18 +88,6 @@
     <ProjectReference Include="..\DataExtractService.Objects\DataExtractService.Objects.csproj">
       <Project>{37f9df0b-319e-435c-aeb7-0bc5f03d3b30}</Project>
       <Name>DataExtractService.Objects</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DataExtractService.Repository.Contracts\DataExtractService.Repository.Contracts.csproj">
-      <Project>{88f421ca-914f-4805-8349-ce1faeb33548}</Project>
-      <Name>DataExtractService.Repository.Contracts</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DataExtractService.Repository.Implementation\DataExtractService.Repository.Implementation.csproj">
-      <Project>{a2ead1d4-8cff-4c3e-8a99-c47de9bad1cc}</Project>
-      <Name>DataExtractService.Repository.Implementation</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DataExtractService.Shared.Logging\DataExtractService.Shared.Logging.csproj">
-      <Project>{4dc1d8ab-1279-4c7b-9b31-bfedc1f2079b}</Project>
-      <Name>DataExtractService.Shared.Logging</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

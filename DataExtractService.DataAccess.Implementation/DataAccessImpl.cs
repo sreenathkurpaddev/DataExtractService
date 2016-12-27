@@ -1,7 +1,8 @@
-﻿using DataExtractService.DataAccess.Contracts;
+﻿using App.Core.Logging;
+using App.Core.Repository.Contracts;
+using App.Core.Repository.Implementation;
+using DataExtractService.DataAccess.Contracts;
 using DataExtractService.Objects;
-using DataExtractService.Repository.Contracts;
-using DataExtractService.Shared.Logging;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -16,7 +17,7 @@ namespace DataExtractService.DataAccess.Implementation
         //LogWrapper.Log(string.Format("", );
         public DataAccessImpl()
         {
-            _repo = new Repository.Implementation.Repository();
+            _repo = new Repository();
         }
 
         public async Task<KeyEventWrapper> GetKeyEventsToProcessAsync()

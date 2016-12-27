@@ -69,10 +69,6 @@
       <Project>{37f9df0b-319e-435c-aeb7-0bc5f03d3b30}</Project>
       <Name>DataExtractService.Objects</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DataExtractService.Shared.Logging\DataExtractService.Shared.Logging.csproj">
-      <Project>{4dc1d8ab-1279-4c7b-9b31-bfedc1f2079b}</Project>
-      <Name>DataExtractService.Shared.Logging</Name>
-    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

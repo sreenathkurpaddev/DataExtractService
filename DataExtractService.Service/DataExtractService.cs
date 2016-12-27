@@ -1,7 +1,6 @@
-﻿using DataExtractService.Implementation;
+﻿using App.Core.Logging;
+using DataExtractService.Implementation;
 using DataExtractService.Interface;
-using DataExtractService.NinjectKernel;
-using DataExtractService.Shared.Logging;
 using System;
 using System.Configuration;
 using System.ServiceProcess;
@@ -18,7 +17,6 @@ namespace DataExtractService.Service
             
             LogWrapper.Log("Data Extract Service constructor started", $"Thread id: {System.Threading.Thread.CurrentThread.ManagedThreadId}", 1, System.Diagnostics.TraceEventType.Information);
             InitializeComponent();
-            ComponentKernel.LoadKernel(ConfigurationManager.AppSettings["NInjenctBindingsXmlPath"]);
             StartTimer();
             LogWrapper.Log("Data Extract Service constructor completed", $"Thread id: {System.Threading.Thread.CurrentThread.ManagedThreadId}", 1, System.Diagnostics.TraceEventType.Information);
 
